@@ -6,7 +6,7 @@
 
 """
 
-from ABE_ADCPi import ADCPi
+from ABE_ADCDifferentialPi import ADCDifferentialPi
 from ABE_helpers import ABEHelpers
 import sys
 import sqlite3
@@ -27,7 +27,7 @@ def main():
     try:
         i2c_helper = ABEHelpers()
         bus = i2c_helper.get_smbus()
-        adc = ADCPi(bus, 0x68, 0x69, 12)
+        adc = ADCDifferentialPi(bus, 0x68, 0x69, 18)
         insertData(connection, adc.read_voltage(1), adc.read_voltage(2))
     except Exception as e:
         print 'An error occured inserting data: {}'.format(e)
