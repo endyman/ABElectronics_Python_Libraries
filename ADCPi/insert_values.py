@@ -19,7 +19,7 @@ def getConnection(database):
     return connection
 
 def insertData(connection, pyr1, pyr2):
-    connection.execute('INSERT INTO READING(TIMESTAMP, PYR1, PYR2) VALUES("{}", {}, {})'.format(str(datetime.datetime.now()), 1.0, 1.2))
+    connection.execute('INSERT INTO READING(TIMESTAMP, PYR1, PYR2) VALUES("{}", {}, {})'.format(str(datetime.datetime.now()), pyr1, pyr2))
     connection.commit()
 
 def main():
