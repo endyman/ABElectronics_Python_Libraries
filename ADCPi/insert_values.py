@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # vim: set ts=4 sts=4 sw=4 expandtab:
 
-"""Script to initalize an sqlite database
+"""Script to insert readings into an sqlite database
 
 """
 
