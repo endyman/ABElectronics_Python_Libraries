@@ -21,7 +21,7 @@ def getData(connection):
     cursor = connection.execute('SELECT * from READING')
     print 'id;timestamp;pyr1;pyr2'
     for row in cursor:
-        print '{}{}{}{}{}{}{}'.format(row[0], CSV_DELIMITER, str(row[1]), CSV_DELIMITER, row[2], CSV_DELIMITER, row[3])
+        print '{}{}{}{}{:f}{}{:f}'.format(row[0], CSV_DELIMITER, str(row[1]), CSV_DELIMITER, row[2], CSV_DELIMITER, row[3])
 
 def main():
     connection = getConnection(DB_NAME)
